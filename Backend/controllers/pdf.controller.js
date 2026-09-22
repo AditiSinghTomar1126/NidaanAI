@@ -6,7 +6,7 @@ import fs from "fs";
 export const heartScraper = (req, res) => {
   const pdfPath = path.join("uploads", req.file.filename);
 
-  const pythonProcess = spawn("python", [
+  const pythonProcess = spawn("python3", [
     "../DataScrapingScripts/scrapHeart.py",
     pdfPath,
   ]);
@@ -61,7 +61,7 @@ function deleteFile(filePath) {
 export const diabetesScraper = (req, res) => {
   const pdfPath = path.join("uploads", req.file.filename);
 
-  const pythonProcess = spawn("python", [
+  const pythonProcess = spawn("python3", [
     "../DataScrapingScripts/scrapDiabetes.py",
     pdfPath,
   ]);

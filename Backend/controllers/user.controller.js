@@ -91,14 +91,13 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "username or email is required");
   }
 
-  // Here is an alternative of above code based on logic discussed in video:
-  // if (!(username || email)) {
-  //     throw new ApiError(400, "username or email is required")
-
-  // }
+  // Normalize username and email to lowercase for case-insensitive lookup
+  // (since they are stored as lowercase in the database)
+  const normalizedUsername = username ? username.toLowerCase() : undefined;
+  const normalizedEmail = email ? email.toLowerCase() : undefined;
 
   const user = await User.findOne({
-    $or: [{ username }, { email }],
+    $or: [{ username: normalizedUsername }, { email: normalizedEmail }],
   });
 
   if (!user) {

@@ -26,8 +26,6 @@ app.use(
   })
 );
 
-app.use(cors({ origin: "https://predicti-x-v2.vercel.app", credentials: true }));
-
 // Configurations for different types of data acceptance
 // Limiting json data acceptance
 app.use(express.json());

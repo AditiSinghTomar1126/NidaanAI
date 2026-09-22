@@ -58,7 +58,7 @@ const heartpred = asyncHandler(async (req, res) => {
     // Condition check for p6: If yes (assuming 1 for yes and 0 for no)
     const transformedP6 = isNaN(p6) ? (p6.toLowerCase() === "yes" ? 1 : 0) : p6;
 
-    const python = spawn("python", [
+    const python = spawn("python3", [
       heartPath,
       p1,
       transformedP2.toString(),
@@ -140,7 +140,7 @@ const diabetespred = asyncHandler(async (req, res) => {
       throw new ApiError(400, "All inputData fields must be provided");
     }
 
-    const pythonProcess = spawn("python", [diabetesPath, ...inputData]);
+    const pythonProcess = spawn("python3", [diabetesPath, ...inputData]);
 
     let predictionVal = "";
 
@@ -198,7 +198,7 @@ const lungpred = asyncHandler(async (req, res) => {
       throw new ApiError(404, "Uploaded file not found");
     }
 
-    const pythonProcess = spawn("python", [
+    const pythonProcess = spawn("python3", [
       path.resolve(__dirname, "../ML/Lung Cancer Prediction/predict.py"),
       filePath,
     ]);
@@ -260,7 +260,7 @@ const breastpred = asyncHandler(async (req, res) => {
     throw new ApiError(404, "Uploaded file not found");
   }
 
-  const pythonProcess = spawn("python", [
+  const pythonProcess = spawn("python3", [
     path.resolve(
       __dirname,
       "../ML/Breast Cancer Prediction/breast_cancer_prediction.py"

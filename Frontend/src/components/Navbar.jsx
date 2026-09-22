@@ -98,7 +98,7 @@ function Navbar() {
         pauseOnHover
       />
       <div className="navbar-logo">
-        <img src={logo} alt="PredictiX" />
+        <img src={logo} alt="NidaanAI" />
       </div>
       <div className={`navbar-links ${isMobile ? "mobile active" : ""}`}>
         <NavLink
