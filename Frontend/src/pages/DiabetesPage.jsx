@@ -45,7 +45,7 @@ const DiabetesPage = () => {
 
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/pdf/diabetes-scraper),
+          `${import.meta.env.VITE_API_URL}/api/pdf/diabetes-scraper`,
           {
             method: "POST",
             body: formData,
@@ -86,7 +86,7 @@ const DiabetesPage = () => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/v1/predict/diabetes-pred),
+        `${import.meta.env.VITE_API_URL}/api/v1/predict/diabetes-pred`,
         {
           method: "POST",
           headers: {
