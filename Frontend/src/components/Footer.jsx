@@ -1,11 +1,12 @@
 import React from "react";
 import logo from "../assets/Logo.png"; 
 import {
-  FaInstagram,
+  FaGlobe,
   FaLinkedinIn,
   FaGithub,
-  FaTwitter,
+  FaEnvelope,
 } from "react-icons/fa";
+
 
 function Footer() {
   return (
@@ -21,16 +22,16 @@ function Footer() {
           </p>
 
           <div className="footer-social">
-            <a href="#" aria-label="Instagram">
-              <FaInstagram />
+            <a href="https://aditisinghtomar-aditi-singh-tomar1126.vercel.app/" aria-label="Instagram">
+              <FaGlobe />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/aditisinghtomar" aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
-            <a href="#" aria-label="Twitter">
-              <FaTwitter />
+            <a href="mailto:aditisinghtomar1126@gmail.com" aria-label="mail">
+              <FaEnvelope />
             </a>
-            <a href="#" aria-label="GitHub">
+            <a href=" https://github.com/AditiSinghTomar1126" aria-label="GitHub">
               <FaGithub />
             </a>
           </div>
