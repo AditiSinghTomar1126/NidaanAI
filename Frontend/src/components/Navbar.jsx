@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import FaTimes for the cross icon
-import logo from "../assets/PredictiX_main_logo.png";
+import logo from "../assets/Logo.png"; // Import the logo image
 import { UserContext } from "../context/UserContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

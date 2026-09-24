@@ -10,6 +10,7 @@ import BreastPage from "./pages/BreastPage";
 import LungPage from "./pages/LungPage";
 import HeartPage from "./pages/HeartPage";
 import DiabetesPage from "./pages/DiabetesPage";
+import Footer from "./components/Footer";
 import { UserContextProvider } from "./context/UserContext";
 
 function App() {
@@ -22,13 +23,14 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
 
-            {/* Routes with Navbar */}
+            {/* Routes with Nav and footer */}
             <Route
               path="/"
               element={
                 <div>
                   <Navbar />
                   <HomePage />
+                  <Footer />
                 </div>
               }
             />
@@ -38,6 +40,7 @@ function App() {
                 <div>
                   <Navbar />
                   <PredictorsPage />
+                  <Footer />
                 </div>
               }
             />
@@ -47,6 +50,7 @@ function App() {
                 <div>
                   <Navbar />
                   <BreastPage />
+                  <Footer />
                 </div>
               }
             />
@@ -56,6 +60,7 @@ function App() {
                 <div>
                   <Navbar />
                   <LungPage />
+                  <Footer />
                 </div>
               }
             />
@@ -65,6 +70,7 @@ function App() {
                 <div>
                   <Navbar />
                   <HeartPage />
+                  <Footer />
                 </div>
               }
             />
@@ -74,6 +80,7 @@ function App() {
                 <div>
                   <Navbar />
                   <DiabetesPage />
+                  <Footer />
                 </div>
               }
             />
@@ -83,6 +90,7 @@ function App() {
                 <div>
                   <Navbar />
                   <AboutPage />
+                  <Footer />
                 </div>
               }
             />

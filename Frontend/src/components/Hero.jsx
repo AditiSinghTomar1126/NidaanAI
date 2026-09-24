@@ -1,25 +1,290 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
-import homepageImage from "../assets/homepage.png";
+import { Link } from "react-router-dom";
+import medicalHero from "../assets/hero.png";
 
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <h1>An AI Multi-Disease Diagnostic Suite</h1>
-        <p>
-          Revolutionizing Healthcare: Comprehensive, Rapid AI Diagnostics Suite
-          for Accurate Multi-Disease Detection and Prevention.
-        </p>
-        <Link to="/predictors" style={{ textDecoration: "none" }}>
-          <div className="pos">
-            <button className="btn btn-primary">Diagnose Now</button>
+      <div className="hero-inner">
+
+        <div className="hero-copy">
+          <span className="eyebrow">AI-POWERED HEALTHCARE</span>
+
+          <h1>
+            Smarter prediction
+            <br />
+            for a <em>healthier future.</em>
+          </h1>
+
+          <p>
+            NidaanAI uses intelligent prediction models to identify patterns
+            across major diseases and help you understand health risks earlier.
+          </p>
+
+          <div className="hero-actions">
+            <Link to="/predictors">Explore Predictions <b>→</b></Link>
+            <Link to="/about">Learn More</Link>
           </div>
-        </Link>
+
+          <div className="hero-points">
+            <div><strong>04</strong><span>Prediction<br />Models</span></div>
+            <div><strong>AI</strong><span>Assisted<br />Analysis</span></div>
+            <div><strong>24/7</strong><span>Accessible<br />Platform</span></div>
+          </div>
+        </div>
+
+        <div className="hero-art">
+          <div className="orb orb-one" />
+          <div className="orb orb-two" />
+
+          <img src={medicalHero} alt="Medical prediction technology" />
+
+          <div className="floating-card prediction">
+            <strong>04</strong>
+            <span>Disease<br />Prediction Models</span>
+          </div>
+
+          <div className="floating-card models">
+            <div>♡ <span>Heart Disease</span></div>
+            <div>◉ <span>Diabetes</span></div>
+            <div>◌ <span>Lung Cancer</span></div>
+            <div>✦ <span>Breast Cancer</span></div>
+          </div>
+        </div>
+
       </div>
-      <div className="hero-image">
-        <img src={homepageImage} alt="AI Multi-Disease Diagnostic Suite" />
-      </div>
+
+      <style>{`
+        .hero {
+          background: #fff;
+          font-family: Inter, sans-serif;
+          overflow: hidden;
+        }
+
+        .hero-inner {
+
+         width: 100%;
+        
+          min-height: 650px;
+          margin: 0;
+          display: grid;
+          grid-template-columns: .9fr 1.1fr;
+          align-items: center;
+          gap: 25px;
+        }
+
+        .eyebrow {
+          color: #00b4d8;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: .2em;
+        }
+
+        .eyebrow::before {
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 1px;
+          margin-right: 10px;
+          vertical-align: middle;
+          background: #00b4d8;
+        }
+
+        .hero h1 {
+          margin: 18px 0;
+          color: #03045e;
+          font-family: "Playfair Display", Georgia, serif;
+          font-size: clamp(46px, 5vw, 68px);
+          line-height: 1.02;
+          letter-spacing: -.045em;
+        }
+
+        .hero h1 em {
+          color: #0077b6;
+          font-style: normal;
+        }
+
+        .hero-copy p {
+          max-width: 500px;
+          color: #657389;
+          font-size: 18px;
+          line-height: 1.2;
+        }
+
+        .hero-actions {
+          display: flex;
+          gap: 12px;
+          margin-top: 60px;
+          
+        }
+
+        .hero-actions a {
+          padding: 13px 18px;
+          border: 1px solid #0077b6;
+          border-radius: 35px;
+          color: #0077b6;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .hero-actions a:first-child {
+          background: #0077b6;
+          
+          color: #fff;
+        }
+
+
+        .hero-actions a:hover {
+          background: #1755ab;
+        
+          color: #fff;
+        }
+
+        .hero-actions b {
+          margin-left: 12px;
+          font-size: 15px;
+        }
+
+        .hero-points {
+          display: flex;
+          gap: 50px;
+          margin-top: 42px;
+        }
+
+        .hero-points div {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .hero-points strong {
+          color: #0077b6;
+          font-family: "Playfair Display", Georgia, serif;
+          font-size: 32px;
+        }
+
+        .hero-points span {
+          color: #657389;
+          font-size: 10px;
+          line-height: 1.4;
+          text-transform: uppercase;
+          letter-spacing: .06em;
+        }
+
+        .hero-art {
+          position: absolute;
+          right: 0;
+          top: 10%;
+        width: 50%;
+          height: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #edf4ff;
+          border-radius:  50% 0 30% 15%;
+          overflow: hidden;
+        }
+
+        .hero-art img {
+          position: relative;
+          z-index: 2;
+          width: 90%;
+          height: 90%;
+          object-fit: contain;
+        }
+
+
+        .orb {
+          position: absolute;
+          border: 35px solid  rgb(213, 227, 249);
+          border-radius: 50%;
+        }
+
+        .orb-one {
+          width: 420px;
+          height: 420px;
+          left: -150px;
+          bottom: -170px;
+        }
+
+        .orb-two {
+          width: 260px;
+          height: 260px;
+          right: -100px;
+          top: -90px;
+        }
+
+        .floating-card {
+          position: absolute;
+          z-index: 4;
+          display: flex;
+          align-items: center;
+          background: rgba(255,255,255,.94);
+          box-shadow: 0 12px 35px rgba(3,4,94,.1);
+        }
+
+        .prediction {
+          top: 55px;
+          right: 25px;
+          gap: 10px;
+          padding: 13px 17px;
+        }
+
+        .prediction strong {
+          color: #0077b6;
+          font-family: "Playfair Display", Georgia, serif;
+          font-size: 28px;
+        }
+
+        .prediction span {
+          color: #03045e;
+          font-size: 9px;
+          line-height: 1.4;
+        }
+
+        .models {
+          left: 100px;
+          bottom: 55px;
+          display: grid;
+          gap: 8px;
+          padding: 14px 18px;
+        }
+
+        .models div {
+          color: #00b4d8;
+          font-size: 11px;
+        }
+
+        .models span {
+          margin-left: 8px;
+          color: #03045e;
+          font-size: 9px;
+        }
+
+        @media (max-width: 750px) {
+          .hero-inner {
+            grid-template-columns: 1fr;
+            padding: 55px 0;
+          }
+
+          .hero h1 {
+            font-size: 46px;
+          }
+
+          .hero-art {
+            height: 400px;
+          }
+
+          .hero-points {
+            gap: 18px;
+          }
+
+          .models {
+            left: 10px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

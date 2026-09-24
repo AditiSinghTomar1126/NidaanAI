@@ -13,7 +13,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-8 bg-[#18a889]" />
               <span className="text-xs font-semibold tracking-[0.22em] text-[#18a889] uppercase">
-                ABOUT PREDICTIX
+                ABOUT NidaanAI
               </span>
             </div>
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="mt-6 text-base leading-[1.7] text-[#16293b]/80 max-w-xl">
-              Predictix uses machine learning and deep learning models to analyze health parameters and medical reports and generate disease prediction results through a simple, intuitive interface.
+              NidaanAI uses machine learning and deep learning models to analyze health parameters and medical reports and generate disease prediction results through a simple, intuitive interface.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-6">
