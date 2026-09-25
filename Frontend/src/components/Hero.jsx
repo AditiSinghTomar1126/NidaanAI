@@ -263,27 +263,168 @@ function Hero() {
         }
 
         @media (max-width: 750px) {
-          .hero-inner {
-            grid-template-columns: 1fr;
-            padding: 55px 0;
-          }
+  .hero {
+    overflow: hidden;
+  }
 
-          .hero h1 {
-            font-size: 46px;
-          }
+  .hero-inner {
+    width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 45px 20px 30px;
+  }
 
-          .hero-art {
-            height: 400px;
-          }
+  .hero-copy {
+    width: 100%;
+  }
 
-          .hero-points {
-            gap: 18px;
-          }
+  .eyebrow {
+    font-size: 9px;
+  }
 
-          .models {
-            left: 10px;
-          }
-        }
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 46px);
+    line-height: 1.08;
+    margin: 18px 0;
+  }
+
+  .hero-copy p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .hero-actions a {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .hero-points {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .hero-points div {
+    gap: 6px;
+  }
+
+  .hero-points strong {
+    font-size: 25px;
+  }
+
+  .hero-points span {
+    font-size: 8px;
+  }
+
+  .hero-art {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 340px;
+    border-radius: 45% 45% 18px 18px;
+    margin: 0 auto;
+  }
+
+  .hero-art img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+  }
+
+  .orb-one {
+    width: 260px;
+    height: 260px;
+    left: -100px;
+    bottom: -120px;
+    border-width: 22px;
+  }
+
+  .orb-two {
+    width: 180px;
+    height: 180px;
+    right: -70px;
+    top: -60px;
+    border-width: 22px;
+  }
+
+  .prediction {
+    top: 20px;
+    right: 12px;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .prediction strong {
+    font-size: 24px;
+  }
+
+  .prediction span {
+    font-size: 8px;
+  }
+
+  .models {
+    left: 12px;
+    bottom: 15px;
+    gap: 7px;
+    padding: 12px 14px;
+  }
+
+  .models div {
+    font-size: 10px;
+  }
+
+  .models span {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-inner {
+    padding: 35px 15px 25px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-actions a {
+    padding: 11px 13px;
+    font-size: 11px;
+  }
+
+  .hero-points strong {
+    font-size: 22px;
+  }
+
+  .hero-points span {
+    font-size: 7px;
+  }
+
+  .hero-art {
+    height: 290px;
+  }
+
+  .models {
+    left: 8px;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .prediction {
+    right: 8px;
+    top: 12px;
+  }
+}
       `}</style>
     </section>
   );

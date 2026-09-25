@@ -623,80 +623,192 @@ export default function AboutNidaanAI() {
           }
         }
 
-        @media (max-width: 640px) {
-          .NidaanAI-shell {
-            width: min(100% - 32px, 1180px);
-          }
+        /* ===== MOBILE RESPONSIVE ===== */
 
-          .NidaanAI-about-grid {
-            padding: 68px 0 70px;
-            gap: 45px;
-          }
+@media (max-width: 640px) {
+  .NidaanAI-shell {
+    width: calc(100% - 32px);
+  }
 
-          .NidaanAI-intro h2 {
-            font-size: clamp(36px, 11vw, 48px);
-          }
+  /* About section */
+  .NidaanAI-about-grid {
+    width: 100%;
+    margin-top: 25px;
+    padding: 45px 20px;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
 
-          .NidaanAI-section-heading {
-            align-items: flex-start;
-          }
+  .NidaanAI-intro h2 {
+    font-size: clamp(34px, 9vw, 44px);
+    line-height: 1.1;
+    margin: 16px 0;
+  }
 
-          .NidaanAI-heading-mark {
-            display: none;
-          }
+  .NidaanAI-lead {
+    font-size: 14px;
+    line-height: 1.75;
+  }
 
-          .NidaanAI-condition-grid {
-            grid-template-columns: 1fr;
-          }
+  .NidaanAI-text-link {
+    margin-top: 22px;
+  }
 
-          .NidaanAI-condition-card {
-            min-height: 87px;
-          }
+  /* Prediction modules */
+  .NidaanAI-section-heading {
+    align-items: flex-start;
+  }
 
-          .NidaanAI-statement {
-            min-height: 82px;
-            gap: 12px;
-          }
+  .NidaanAI-section-heading h3 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
 
-          .NidaanAI-line {
-            width: 18px;
-          }
+  .NidaanAI-description {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 14px 0 20px;
+  }
 
-          .NidaanAI-work-section {
-            padding: 70px 0;
-          }
+  .NidaanAI-condition-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-          .NidaanAI-work-heading {
-            margin-bottom: 34px;
-          }
+  .NidaanAI-condition-card {
+    min-height: 85px;
+    padding: 15px;
+    gap: 12px;
+  }
 
-          .NidaanAI-steps {
-            grid-template-columns: 1fr;
-            gap: 10px;
-          }
+  .NidaanAI-condition-card h4 {
+    font-size: 13px;
+  }
 
-          .NidaanAI-step {
-            min-height: auto;
-            padding: 18px;
-          }
+  .NidaanAI-condition-card p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
 
-          // .NidaanAI-step-icon {
-          //   margin-bottom: 14px;
-          // }
+  /* How it works */
+  .NidaanAI-work-section {
+    width: calc(100% - 32px);
+    padding: 60px 0;
+  }
 
-          .NidaanAI-cta {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 27px 24px;
-            border-radius: 15px;
-          }
+  .NidaanAI-work-heading {
+    margin-bottom: 30px;
+    text-align: left;
+  }
 
-          .NidaanAI-cta-button {
-            width: 100%;
-            justify-content: center;
-          }
-        }
+  .NidaanAI-work-heading h2 {
+    font-size: 34px;
+    line-height: 1.12;
+  }
 
+  .NidaanAI-work-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .NidaanAI-steps {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .NidaanAI-step {
+    height: auto;
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .NidaanAI-step-number {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .NidaanAI-step h3 {
+    font-size: 16px;
+  }
+
+  .NidaanAI-step p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* Individual arrows between steps */
+  .NidaanAI-step-arrow {
+    transform: rotate(90deg);
+    height: 20px;
+  }
+
+  .NidaanAI-step-arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* CTA section */
+  .NidaanAI-cta-wrap {
+    width: calc(100% - 32px);
+    padding-bottom: 55px;
+  }
+
+  .NidaanAI-cta {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 26px 22px;
+    border-radius: 14px;
+  }
+
+  .NidaanAI-cta h2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .NidaanAI-cta p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .NidaanAI-cta-button {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .NidaanAI-about-grid {
+    padding: 38px 15px;
+  }
+
+  .NidaanAI-intro h2 {
+    font-size: 33px;
+  }
+
+  .NidaanAI-section-heading h3 {
+    font-size: 27px;
+  }
+
+  .NidaanAI-condition-card {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .NidaanAI-icon-box {
+    width: 34px;
+    height: 34px;
+  }
+
+  .NidaanAI-cta {
+    padding: 23px 18px;
+  }
+}
         @media (prefers-reduced-motion: reduce) {
           .NidaanAI-condition-card,
           .NidaanAI-text-link,

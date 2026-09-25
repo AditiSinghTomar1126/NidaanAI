@@ -57,8 +57,8 @@ function Footer() {
             <h4>Support</h4>
             <a href="/login">Log In</a>
             <a href="/signup">Sign Up</a>
-            <a href="/contact">Contact</a>
-            <a href="/privacy">Privacy Policy</a>
+            <a href="mailto:aditisinghtomar1126@gmail.com">Contact</a>
+            <a href="#process">How it works</a>
           </div>
         </div>
 
