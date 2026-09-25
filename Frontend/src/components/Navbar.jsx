@@ -97,9 +97,9 @@ function Navbar() {
         draggable
         pauseOnHover
       />
-      <div className="navbar-logo">
+      <NavLink to = "/" className="navbar-logo">
         <img src={logo} alt="NidaanAI" />
-      </div>
+      </NavLink>
       <div className={`navbar-links ${isMobile ? "mobile active" : ""}`}>
         <NavLink
           to="/"
